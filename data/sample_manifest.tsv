@@ -1,0 +1,5 @@
+sample_id	donor_id	phenotype	paired_design	tissue
+Black1	Donor1	Black	yes	scalp_hair_follicle
+Grey1	Donor1	Grey	yes	scalp_hair_follicle
+Black2	Donor2	Black	yes	scalp_hair_follicle
+Grey2	Donor2	Grey	yes	scalp_hair_follicle
