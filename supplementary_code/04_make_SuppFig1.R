@@ -1,28 +1,8 @@
-# =============================================================================
-# 04_make_SuppFig1.R — Supplementary scRNA-seq supporting evidence montage
-#
-# As in 03_make_Fig1.R, the montage letters are internal identifiers. The
-# published supplementary figures are assembled in Illustrator:
-#
-#   montage pA  melanocyte gene lollipop (Bonferroni)   -> Figure S1A
-#   montage pB  RAB GTPase family screen (Bonferroni)   -> Figure S1B
-#   montage pC  RAB7A across all cell types             -> Figure S2A
-#   montage pD  RAB7A in KRT35/85+ KC, external cohort  -> Figure S2B
-#
-# Manuscript Figure S1C-S1E (KRT31/KRT35/KRT85 feature plots) are produced by
-# 03_make_Fig1.R.
-#
-# Panel D reads the exact normalized source-data values provided in
-# ../data/external/Figure_S2B_source_data.tsv. The table contains cells from
-# the top quartile of public-cohort keratinocyte subclusters ranked by mean
-# KRT35/KRT85 expression; see supplementary_code/external_cohort/README.md.
-#
-# Input:  data.hair.std.r0.5.rds, data.hair.rename.rds,
-#         krt35_85_keratinocytes.rds, Figure_S2B_source_data.tsv
-# Output: <figures>/SuppFig_scRNA_evidence_v2.pdf,
-#         <results>/SuppFig_scRNA_evidence_stats.csv
-# =============================================================================
-
+# Internal-cohort supporting panels only; montage letters are not manuscript letters.
+# A: ten melanocyte markers (Figure S1A); B: 49 RAB genes (Figure S1B).
+# C: RAB7A in nine cell types (Figure S2A). These calculations are unchanged.
+# Revised external S2B is generated ONLY by external_cohort/01_make_Figure_S2B.R.
+# Historical external top-quartile code is deliberately not executed here.
 source("config.R")
 
 library(Seurat)
@@ -242,76 +222,20 @@ for (ct in ct_order) {
 }
 rm(hair.std, rename); gc()
 
-# =============================================================================
-# PANEL D — RAB7A in KRT35/85-enriched KC (external cohort)  [Figure S2B]
-# =============================================================================
-cat(">>> Panel D: RAB7A in KRT35/85+ KC (public) ...\n")
 
-external_s2b_path <- Sys.getenv(
-  "HAIR_EXTERNAL_S2B_SOURCE",
-  unset = file.path("..", "data", "external", "Figure_S2B_source_data.tsv")
-)
-if (file.exists(external_s2b_path)) {
-  external_s2b <- read.delim(external_s2b_path, stringsAsFactors = FALSE)
-  required_external_columns <- c("phenotype", "RAB7A")
-  missing_external_columns <- setdiff(required_external_columns, names(external_s2b))
-  if (length(missing_external_columns) > 0) {
-    stop("Figure S2B source data are missing columns: ",
-         paste(missing_external_columns, collapse = ", "))
-  }
-
-  df_d <- data.frame(
-    RAB7A = external_s2b$RAB7A,
-    Phenotype = external_s2b$phenotype
-  ) %>%
-    filter(!is.na(Phenotype), !is.na(RAB7A))
-  df_d$Phenotype <- factor(df_d$Phenotype, levels = c("black", "white"),
-                           labels = c("Black", "White"))
-
-  pD <- make_violin(df_d, "RAB7A", "RAB7A expression", colors = public_colors) +
-    ggtitle("KRT35/85+ KC (public)") +
-    theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5,
-                                    family = "Arial"))
-
-  b <- df_d %>% filter(Phenotype == "Black") %>% pull(RAB7A)
-  w <- df_d %>% filter(Phenotype == "White") %>% pull(RAB7A)
-  wt <- wilcox.test(b, w)
-  stats_list[[length(stats_list) + 1]] <- data.frame(
-    panel = "D", cell_type = "KRT35/85+ KC", cohort = "public_v2",
-    n_black = length(b), n_grey = length(w),
-    mean_black = mean(b), mean_grey = mean(w),
-    fold_change = mean(b) / max(mean(w), 1e-10),
-    wilcox_p = wt$p.value, bonferroni_p = NA, significant = wt$p.value < 0.05)
-
-  rm(external_s2b); gc()
-} else {
-  cat("  WARNING: Figure S2B source data not found, skipping Panel D\n")
-  pD <- ggplot() + theme_void() +
-    annotate("text", x = 0.5, y = 0.5, label = "Panel D\n(public data not available)")
-}
-
-# =============================================================================
-# ASSEMBLE 4-PANEL FIGURE
-# =============================================================================
-cat(">>> Assembling supplementary figure ...\n")
-
+# Assemble only the three internal-cohort panels.
 row1 <- plot_grid(pA, pB, ncol = 2, rel_widths = c(1, 1.5),
                   labels = c("A", "B"), label_size = 14,
                   label_fontface = "bold", label_fontfamily = "Arial")
-
-row2 <- plot_grid(pC, pD, ncol = 2, rel_widths = c(2, 1),
-                  labels = c("C", "D"), label_size = 14,
+row2 <- plot_grid(pC, labels = "C", label_size = 14,
                   label_fontface = "bold", label_fontfamily = "Arial")
-
 combined <- plot_grid(row1, row2, ncol = 1, rel_heights = c(1, 1))
-
-out_pdf <- file.path(fig_dir, "SuppFig_scRNA_evidence_v2.pdf")
+out_pdf <- file.path(fig_dir, "SuppFig_internal_scRNA_evidence.pdf")
 cairo_pdf(out_pdf, width = 12, height = 10)
 print(combined)
 dev.off()
 cat(sprintf("  Saved: %s\n", out_pdf))
 
-# =============================================================================
 # SAVE STATISTICS
 # =============================================================================
 stats_df <- bind_rows(stats_list)

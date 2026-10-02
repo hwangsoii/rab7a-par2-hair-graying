@@ -1,0 +1,7 @@
+sample	public_fastq_prefix	phenotype	donor_group	paired
+F18	ryg035	black	D01	FALSE
+F59	ryg029	black	D02	FALSE
+F31B	black-1	black	D03	TRUE
+F31W	white-2	white	D03	TRUE
+F62B	ryg047	black	D04	TRUE
+F62W	ryg048	white	D04	TRUE

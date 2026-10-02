@@ -1,0 +1,243 @@
+{
+  "script": "06_marker_review_v2.R",
+  "run_at": "2026-10-01 08:29:56 UTC",
+  "plan_sha256": "9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33",
+  "amendment_sha256": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84",
+  "a4_sha256": "92f6320a8da303e110a4898af38e2fcb12b2f1c073fbdf8585309e603ac8505e",
+  "integrated_object_sha256": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59",
+  "integrated_object_sha256_after": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59",
+  "script06_sha256": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6",
+  "markers_requested": {
+    "cortex_cuticle": ["KRT31", "KRT35", "KRT85", "KRT32", "KRT33A"],
+    "basal_ORS": ["KRT5", "KRT14", "KRT15", "KRT17", "KRT6A", "KRT16", "COL17A1"],
+    "IRS": ["KRT25", "KRT27", "KRT71", "KRT73", "TCHH", "GATA3"],
+    "matrix_progenitor": ["MSX2", "LEF1", "HOXC13", "MKI67"],
+    "KRT1_KRT10": ["KRT1", "KRT10"]
+  },
+  "markers_absent": [],
+  "outcome_genes_extracted": false,
+  "s1": {
+    "derived_clusters": [3, 6, 9, 14],
+    "n": 3315,
+    "per_sample": [
+      {
+        "sample": "F18",
+        "derived": 179,
+        "audit_value": 179,
+        "matches_audit": true
+      },
+      {
+        "sample": "F59",
+        "derived": 820,
+        "audit_value": 820,
+        "matches_audit": true
+      },
+      {
+        "sample": "F31B",
+        "derived": 547,
+        "audit_value": 547,
+        "matches_audit": true
+      },
+      {
+        "sample": "F31W",
+        "derived": 247,
+        "audit_value": 247,
+        "matches_audit": true
+      },
+      {
+        "sample": "F62B",
+        "derived": 1138,
+        "audit_value": 1138,
+        "matches_audit": true
+      },
+      {
+        "sample": "F62W",
+        "derived": 384,
+        "audit_value": 384,
+        "matches_audit": true
+      }
+    ],
+    "all_six_samples_present": true,
+    "c2_reconciliation": [
+      {
+        "cluster": "0",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 2422,
+        "object_n": 2422,
+        "agree": true
+      },
+      {
+        "cluster": "1",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 1664,
+        "object_n": 1664,
+        "agree": true
+      },
+      {
+        "cluster": "2",
+        "c2_top_lineage": "KC_IFE_suprabasal",
+        "object_lineage": "KC_IFE_suprabasal",
+        "c2_n": 1452,
+        "object_n": 1452,
+        "agree": true
+      },
+      {
+        "cluster": "3",
+        "c2_top_lineage": "KC_cortex_cuticle",
+        "object_lineage": "KC_cortex_cuticle",
+        "c2_n": 1430,
+        "object_n": 1430,
+        "agree": true
+      },
+      {
+        "cluster": "4",
+        "c2_top_lineage": "KC_IFE_suprabasal",
+        "object_lineage": "KC_IFE_suprabasal",
+        "c2_n": 1390,
+        "object_n": 1390,
+        "agree": true
+      },
+      {
+        "cluster": "5",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 948,
+        "object_n": 948,
+        "agree": true
+      },
+      {
+        "cluster": "6",
+        "c2_top_lineage": "KC_cortex_cuticle",
+        "object_lineage": "KC_cortex_cuticle",
+        "c2_n": 926,
+        "object_n": 926,
+        "agree": true
+      },
+      {
+        "cluster": "7",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 792,
+        "object_n": 792,
+        "agree": true
+      },
+      {
+        "cluster": "8",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 781,
+        "object_n": 781,
+        "agree": true
+      },
+      {
+        "cluster": "9",
+        "c2_top_lineage": "KC_cortex_cuticle",
+        "object_lineage": "KC_cortex_cuticle",
+        "c2_n": 749,
+        "object_n": 749,
+        "agree": true
+      },
+      {
+        "cluster": "10",
+        "c2_top_lineage": "KC_IRS",
+        "object_lineage": "KC_IRS",
+        "c2_n": 618,
+        "object_n": 618,
+        "agree": true
+      },
+      {
+        "cluster": "11",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 506,
+        "object_n": 506,
+        "agree": true
+      },
+      {
+        "cluster": "12",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 462,
+        "object_n": 462,
+        "agree": true
+      },
+      {
+        "cluster": "13",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 453,
+        "object_n": 453,
+        "agree": true
+      },
+      {
+        "cluster": "14",
+        "c2_top_lineage": "KC_cortex_cuticle",
+        "object_lineage": "KC_cortex_cuticle",
+        "c2_n": 210,
+        "object_n": 210,
+        "agree": true
+      },
+      {
+        "cluster": "15",
+        "c2_top_lineage": "KC_IRS",
+        "object_lineage": "KC_IRS",
+        "c2_n": 207,
+        "object_n": 207,
+        "agree": true
+      },
+      {
+        "cluster": "16",
+        "c2_top_lineage": "Myeloid",
+        "object_lineage": "Myeloid",
+        "c2_n": 176,
+        "object_n": 176,
+        "agree": true
+      },
+      {
+        "cluster": "17",
+        "c2_top_lineage": "Melanocyte",
+        "object_lineage": "Melanocyte",
+        "c2_n": 165,
+        "object_n": 165,
+        "agree": true
+      },
+      {
+        "cluster": "18",
+        "c2_top_lineage": "KC_basal_ORS",
+        "object_lineage": "KC_basal_ORS",
+        "c2_n": 107,
+        "object_n": 107,
+        "agree": true
+      },
+      {
+        "cluster": "19",
+        "c2_top_lineage": "KC_IFE_suprabasal",
+        "object_lineage": "KC_IFE_suprabasal",
+        "c2_n": 97,
+        "object_n": 97,
+        "agree": true
+      },
+      {
+        "cluster": "20",
+        "c2_top_lineage": "T_NK",
+        "object_lineage": "T_NK",
+        "c2_n": 66,
+        "object_n": 66,
+        "agree": true
+      }
+    ]
+  },
+  "log": ["integrated object sha256 before load: 63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59", "C2 reconciliation: 21/21 clusters agree", "candidate clusters (integrated res 0.5): 3,6,9,14; n = 3315; audit clusters 3,6,9,14 / n 3315 match: TRUE", "candidate subset of v1 (C9 list): TRUE", "markers absent from RNA assay: 0 ()"],
+  "output_sha256": {
+    "V2_M1_markers_by_integrated_cluster.tsv": "93b00a1e0e30561e17f8bade1f124a5b7b676d1e2a1a834880f85a249be913f6",
+    "V2_M2_markers_by_lineage_group.tsv": "275a918146fbbf5902d5158f52a9f50d24ebf7a86edc3bd777d122c2d7ae2bcf",
+    "V2_M3_markers_candidate_vs_other_by_sample.tsv": "d0c514cc2a060f20de3baee0151875d7a0c1112d31f6b46651b12061c278c0bc",
+    "V2_M4_markers_candidate_cluster_by_sample.tsv": "41a840ec40e8bb81e3b4e65c2fdd0d7ac842d2548fd65936efc5fb387fe1d62b",
+    "V2_M5_codetection_profiles.tsv": "4f0df8dd54a06dd9be5c3af83376944b3572f1065a529f6d2ebd29d61a466424",
+    "V2_M6_marker_dotplots.pdf": "abedb29ce58add016a0a174cf259da723b0495e92a63074009dc967ad0029ef7",
+    "V2_M7_S1_membership_vs_audit.tsv": "812fcefb0973d59cb0aafdeee20fc1e1a90fc57d36b6fc6fb4251e44c0a5b381"
+  },
+  "session": ["R version 4.3.3 (2024-02-29)", "Platform: aarch64-apple-darwin20 (64-bit)", "Running under: macOS 26.6.2", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Asia/Seoul", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] patchwork_1.3.1    ggplot2_3.5.2      Matrix_1.6-5       Seurat_5.2.1      ", "[5] SeuratObject_5.1.0 sp_2.2-0           jsonlite_2.0.0     digest_0.6.37     ", "", "loaded via a namespace (and not attached):", " [1] deldir_2.0-4           pbapply_1.7-2          gridExtra_2.3         ", " [4] rlang_1.1.6            magrittr_2.0.3         RcppAnnoy_0.0.23      ", " [7] matrixStats_1.5.0      ggridges_0.5.6         compiler_4.3.3        ", "[10] spatstat.geom_3.4-1    png_0.1-8              vctrs_0.6.5           ", "[13] reshape2_1.4.4         stringr_1.5.1          pkgconfig_2.0.3       ", "[16] fastmap_1.2.0          labeling_0.4.3         promises_1.3.3        ", "[19] purrr_1.0.4            goftest_1.2-3          later_1.4.2           ", "[22] spatstat.utils_3.1-4   irlba_2.3.7            parallel_4.3.3        ", "[25] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             ", "[28] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-6   ", "[31] reticulate_1.42.0      parallelly_1.45.0      spatstat.univar_3.1-3 ", "[34] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.0            ", "[37] tensor_1.5.1           future.apply_1.11.3    zoo_1.8-14            ", "[40] sctransform_0.4.2      httpuv_1.6.16          splines_4.3.3         ", "[43] igraph_2.1.4           tidyselect_1.2.1       dichromat_2.0-0.1     ", "[46] abind_1.4-8            codetools_0.2-20       spatstat.random_3.4-1 ", "[49] miniUI_0.1.2           spatstat.explore_3.4-3 listenv_0.9.1         ", "[52] lattice_0.22-7         tibble_3.3.0           plyr_1.8.9            ", "[55] withr_3.0.2            shiny_1.11.1           ROCR_1.0-11           ", "[58] Rtsne_0.17             future_1.40.0          fastDummies_1.7.5     ", "[61] survival_3.8-3         polyclip_1.10-7        fitdistrplus_1.2-4    ", "[64] pillar_1.11.0          KernSmooth_2.23-26     plotly_4.11.0         ", "[67] generics_0.1.4         RcppHNSW_0.6.0         scales_1.4.0          ", "[70] globals_0.17.0         xtable_1.8-4           glue_1.8.0            ", "[73] lazyeval_0.2.2         tools_4.3.3            data.table_1.17.8     ", "[76] RSpectra_0.16-2        RANN_2.6.2             dotCall64_1.2         ", "[79] cowplot_1.2.0          grid_4.3.3             tidyr_1.3.1           ", "[82] colorspace_2.1-1       nlme_3.1-168           cli_3.6.5             ", "[85] spatstat.sparse_3.1-0  spam_2.11-1            viridisLite_0.4.2     ", "[88] dplyr_1.1.4            uwot_0.2.3             gtable_0.3.6          ", "[91] progressr_0.15.1       ggrepel_0.9.6          htmlwidgets_1.6.4     ", "[94] farver_2.1.2           htmltools_0.5.8.1      lifecycle_1.0.4       ", "[97] httr_1.4.7             mime_0.13              MASS_7.3-60.0.1       "]
+}

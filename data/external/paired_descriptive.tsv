@@ -1,0 +1,5 @@
+population	donor_group	black_sample	white_sample	n_black	n_white	diff_pseudobulk_log2cpm1	diff_mean_lognorm	metric_disagreement
+v2_KC_cortex_cuticle	D03	F31B	F31W	547	247	-0.21841379143218287	-0.056884560680592944	FALSE
+v2_KC_cortex_cuticle	D04	F62B	F62W	1138	384	-0.11998277012357672	0.0070839956429232798	TRUE
+v1_all_keratinocytes	D03	F31B	F31W	3012	2487	0.069792429023239677	0.021836603751729688	FALSE
+v1_all_keratinocytes	D04	F62B	F62W	3395	2345	-0.070287446886570848	-0.0124109992152035	FALSE

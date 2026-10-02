@@ -1,0 +1,51 @@
+{
+  "record": "Independent automated checkpoint C2 clearance for subsequent frozen descriptive RAB7A execution",
+  "approved": true,
+  "reviewers": [
+    "Reviewer A: Kepler (independent Codex agent 01a0f60b-c341-7f83-b0dc-1e20928b2896)",
+    "Reviewer B: Aquinas (independent Codex agent 01a0f60b-c3d9-7fd1-ab9c-28675aa04fc4)"
+  ],
+  "review_date": "2026-10-01",
+  "c10_sha256": "9a63d03d0e6197e65352e29cac72d4ec5411af4985377760732880756a2e41c5",
+  "approved_versions": {
+    "plan": "9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33",
+    "B0": "fcd02102db50144fda1d89c74a0d81875c327ca0f3b9e2117acb2a0c5b2489ff",
+    "C9": "6783493812399dec5b88f121b8a57efca8dc1d10cea45bc9788866aaab5a62cf",
+    "amendment": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84",
+    "B1": "a9e3968c1b189a007b5adba36c21729207ccf1be945ba9a99c8051129039078b",
+    "v1_cells": "6fb28986b51d958f270dde3358dd1f0256a6c1355351c55fe08ca97193f19a41",
+    "v2_cells": "809a3d06a983b8b11762b107e095df3df9428d854bd6c38535cc6aa93fbe5485",
+    "kc_object": "8b1593f2ecb742b4de9f515d543e886124fb90261cf70b3fe59ac1baf974b4fa",
+    "integrated_object": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59",
+    "A4": "92f6320a8da303e110a4898af38e2fcb12b2f1c073fbdf8585309e603ac8505e",
+    "V2_M0": "ac9a0a11eb3013eaf53740c1c0756ae89ed6fcbdf38cb148a15e2c664a1f704c",
+    "V2_D0": "ba649fcaefd1c0f52ce89bde24c1c025fb82e5c3997d27fe85e688cfc7732cd5",
+    "C2_report": "6ea2235cfd7d91b520397a8efb8cdcd8e0b418a5e114ac3e1f1dc65b42688652",
+    "script05": "b6a8bd2cb49244494db1759e0406ca9262b80b7f502c1796bb8887e7cf26da47",
+    "script06": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6",
+    "script07": "c8407803564e5569a08cf6577e7e34688110724f337edc63a07a9dd9d75613ea",
+    "script08": "3511fcf2ef2f17577fa15ebf8c199bfc8a90ea9711a8adfee2d1ed3c1353792f",
+    "stage2_common": "7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c",
+    "stage2_validate": "ed902acfe583e394e544f5b2435b4176d74ecdef89a38b6700b29fcbc7ead7dc",
+    "stage2_amend_common": "2cd37bdec67c87d174ea297b99a3c9525d78239a3b83afa1eeb1e5b497725267"
+  },
+  "instructions": "This is a NEW outcome-authorizing record; preserve the earlier gate-only record and the unapproved template. Before a subsequent outcome run, verify this record and the exact hashes with the frozen runner's --gate-only mode, then execute only the bound 08 once. Stop after its descriptive outputs and report; no alternative population search, inferential tests, manuscript edits, package installations, commit, push or upload.",
+  "approval_scope": "Prospective execution of the exact frozen 08_outcome_amendment01.R for both v1 and v2 under Amendment 01; all six samples and both paired donors, both metrics, no P values. No manuscript, publication figure, EndNote or released-data changes.",
+  "review_type": "Independent AI-agent technical and marker-consistency review, not human peer review or manuscript approval",
+  "reviewer_a_scope": "Unchanged broad candidate supported for descriptive exploratory analysis by source-level marker and membership checks.",
+  "reviewer_b_scope": "After accepting the parent's reported genuine GATE_OK, Reviewer B cleared subsequent frozen descriptive 08 execution for the unchanged C10/dependency set; no substantive technical objection remained. B did not independently rerun the successful production gate.",
+  "review_note": "CODEX_AMENDMENT01_CHECKPOINT_C2_REVIEW_2026-10-01.txt",
+  "metadata_check": "Parent checked two distinct nonblank reviewer identities and a valid ISO date; frozen script's metadata validation alone does not ensure these.",
+  "prerequisite_gate_only_record": {
+    "path": "REVIEW_RECORD_AMENDMENT01_CODEX_2026-10-01.json",
+    "sha256": "e57d58719049785933bf03a3c4d96760c76538028c12afb8606b8a0f355bfb24",
+    "result": "Parent executed --gate-only: GATE_OK, exit 0; no outcome directory created."
+  },
+  "reporting_conditions": [
+    "Keep all four v2 clusters including cluster 9. Broad provisional population, not pure mature cortex/cuticle or proven equivalent to the internal population.",
+    "Report both populations, all six samples and both donor pairs regardless of direction. v2 is nested in v1, not an independent replication.",
+    "Interpret pseudobulk log2(CPM+1) and mean LogNormalize separately; report metric disagreements. Composition differences do not establish RAB7A differences.",
+    "Historical S2B and its external-validation claim remain unapproved. Review the new computed results before deciding manuscript retention or wording.",
+    "Use the corrected interpretation in the independent review addendum. The existing marker PDF is diagnostic, not publication-ready."
+  ]
+}

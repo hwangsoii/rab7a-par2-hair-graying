@@ -1,0 +1,17 @@
+Plan frozen (checkpoint B)
+frozen_at_utc: 2026-10-01T05:45:31Z
+plan_file: ANALYSIS_PLAN_2026-10-01.md
+plan_sha256: 9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33
+scripts_sha256_at_freeze:
+  393250ca6a09a08b050f0fa5cb6a1bb5f8fdf8452e03e77269eeb6071207fde3  00_node_manifest_by_prefix.py
+  7b6e3fb2f463af441bb6d3384af8f0c745a888d4fb1dadbb3423e16c9d8e4eaa  01_verify_zenodo_counts.R
+  7cd0fe6a2f44e830c77ede71041630bf9a2951529663483b86484f1f687d29e3  02_build_integrated.R
+  94d2009fda382326eca2fd532307f1bbef44b632302f98f18f8f96c49eed771f  03_population_freeze.R
+  01d7389021784084f07a5415688af9711d10657fd7ebcf28522127ba97b3e760  04_rab7a_outcome.R
+  7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c  stage2_common.R
+No RAB7A value from the reconstructed counts had been computed at this time.
+
+Post-freeze script changes (plan unchanged):
+- 2026-10-01T05:46:24Z 02_build_integrated.R: first run halted at FindIntegrationAnchors (future.globals.maxSize 500 MiB exceeded) before any clustering output. Added options(future.globals.maxSize = 8 GiB) (technical) and per-criterion QC failure counts in C1 (descriptive). New sha256: bc054d7f27c1fc461a40692e0a2d9db950dab2c7d8190260a3ff1508b0c95ddc
+
+Checkpoint C reached 2026-10-01T05:55:35Z: population frozen (status rule_non_discriminating_all_keratinocytes); 04_rab7a_outcome.R NOT run, awaiting independent review.

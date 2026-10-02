@@ -1,0 +1,63 @@
+{
+  "script": "08_outcome_amendment01.R",
+  "run_at": "2026-10-01 09:43:28 UTC",
+  "review_record_sha256": "54862e483fb9d1bf5f25acff4cbcb371afd5850d450b81d7aa1d2f691264f031",
+  "c10_sha256": "9a63d03d0e6197e65352e29cac72d4ec5411af4985377760732880756a2e41c5",
+  "denominator": "colSums(RNA counts) == nCount_RNA; union of per-sample min.cells = 3 features",
+  "feature_universe": {
+    "v1": 18491,
+    "v2": 18491
+  },
+  "all_four_white_lower": {
+    "v1_all_keratinocytes": false,
+    "v2_KC_cortex_cuticle": false
+  },
+  "paired": [
+    {
+      "population": "v1_all_keratinocytes",
+      "donor": "F31",
+      "n_black": 3012,
+      "n_white": 2487,
+      "diff_pseudobulk_log2cpm1": 0.0697924290232397,
+      "category_pseudobulk": "white higher",
+      "diff_mean_lognorm": 0.0218366037517297,
+      "category_mean_lognorm": "white higher",
+      "metric_disagreement": false
+    },
+    {
+      "population": "v1_all_keratinocytes",
+      "donor": "F62",
+      "n_black": 3395,
+      "n_white": 2345,
+      "diff_pseudobulk_log2cpm1": -0.0702874468865708,
+      "category_pseudobulk": "white lower",
+      "diff_mean_lognorm": -0.0124109992152035,
+      "category_mean_lognorm": "white lower",
+      "metric_disagreement": false
+    },
+    {
+      "population": "v2_KC_cortex_cuticle",
+      "donor": "F31",
+      "n_black": 547,
+      "n_white": 247,
+      "diff_pseudobulk_log2cpm1": -0.218413791432183,
+      "category_pseudobulk": "white lower",
+      "diff_mean_lognorm": -0.0568845606805929,
+      "category_mean_lognorm": "white lower",
+      "metric_disagreement": false
+    },
+    {
+      "population": "v2_KC_cortex_cuticle",
+      "donor": "F62",
+      "n_black": 1138,
+      "n_white": 384,
+      "diff_pseudobulk_log2cpm1": -0.119982770123577,
+      "category_pseudobulk": "white lower",
+      "diff_mean_lognorm": 0.00708399564292328,
+      "category_mean_lognorm": "white higher",
+      "metric_disagreement": true
+    }
+  ],
+  "note": "Relative expression; no P values; v1 and v2 overlap and are not independent replications",
+  "session": ["R version 4.3.3 (2024-02-29)", "Platform: aarch64-apple-darwin20 (64-bit)", "Running under: macOS 26.6.2", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Asia/Seoul", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] ggplot2_3.5.2      Matrix_1.6-5       Seurat_5.2.1       SeuratObject_5.1.0", "[5] sp_2.2-0           jsonlite_2.0.0     digest_0.6.37     ", "", "loaded via a namespace (and not attached):", "  [1] deldir_2.0-4           pbapply_1.7-2          gridExtra_2.3         ", "  [4] rlang_1.1.6            magrittr_2.0.3         RcppAnnoy_0.0.23      ", "  [7] matrixStats_1.5.0      ggridges_0.5.6         compiler_4.3.3        ", " [10] spatstat.geom_3.4-1    png_0.1-8              vctrs_0.6.5           ", " [13] reshape2_1.4.4         stringr_1.5.1          pkgconfig_2.0.3       ", " [16] fastmap_1.2.0          labeling_0.4.3         promises_1.3.3        ", " [19] purrr_1.0.4            goftest_1.2-3          later_1.4.2           ", " [22] spatstat.utils_3.1-4   irlba_2.3.7            parallel_4.3.3        ", " [25] cluster_2.1.8.1        R6_2.6.1               ica_1.0-3             ", " [28] stringi_1.8.7          RColorBrewer_1.1-3     spatstat.data_3.1-6   ", " [31] reticulate_1.42.0      parallelly_1.45.0      spatstat.univar_3.1-3 ", " [34] lmtest_0.9-40          scattermore_1.2        Rcpp_1.1.0            ", " [37] tensor_1.5.1           future.apply_1.11.3    zoo_1.8-14            ", " [40] sctransform_0.4.2      httpuv_1.6.16          splines_4.3.3         ", " [43] igraph_2.1.4           tidyselect_1.2.1       dichromat_2.0-0.1     ", " [46] abind_1.4-8            codetools_0.2-20       spatstat.random_3.4-1 ", " [49] miniUI_0.1.2           spatstat.explore_3.4-3 listenv_0.9.1         ", " [52] lattice_0.22-7         tibble_3.3.0           plyr_1.8.9            ", " [55] withr_3.0.2            shiny_1.11.1           ROCR_1.0-11           ", " [58] Rtsne_0.17             future_1.40.0          fastDummies_1.7.5     ", " [61] survival_3.8-3         polyclip_1.10-7        fitdistrplus_1.2-4    ", " [64] pillar_1.11.0          KernSmooth_2.23-26     plotly_4.11.0         ", " [67] generics_0.1.4         RcppHNSW_0.6.0         scales_1.4.0          ", " [70] globals_0.17.0         xtable_1.8-4           glue_1.8.0            ", " [73] lazyeval_0.2.2         tools_4.3.3            data.table_1.17.8     ", " [76] RSpectra_0.16-2        RANN_2.6.2             dotCall64_1.2         ", " [79] cowplot_1.2.0          grid_4.3.3             tidyr_1.3.1           ", " [82] colorspace_2.1-1       nlme_3.1-168           patchwork_1.3.1       ", " [85] cli_3.6.5              spatstat.sparse_3.1-0  spam_2.11-1           ", " [88] viridisLite_0.4.2      dplyr_1.1.4            uwot_0.2.3            ", " [91] gtable_0.3.6           progressr_0.15.1       ggrepel_0.9.6         ", " [94] htmlwidgets_1.6.4      farver_2.1.2           htmltools_0.5.8.1     ", " [97] lifecycle_1.0.4        httr_1.4.7             mime_0.13             ", "[100] MASS_7.3-60.0.1       "]
+}

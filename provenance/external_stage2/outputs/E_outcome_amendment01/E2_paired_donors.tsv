@@ -1,0 +1,5 @@
+population	donor	n_black	n_white	diff_pseudobulk_log2cpm1	category_pseudobulk	diff_mean_lognorm	category_mean_lognorm	metric_disagreement
+v1_all_keratinocytes	F31	3012	2487	0.0697924290232397	white higher	0.0218366037517297	white higher	FALSE
+v1_all_keratinocytes	F62	3395	2345	-0.0702874468865708	white lower	-0.0124109992152035	white lower	FALSE
+v2_KC_cortex_cuticle	F31	547	247	-0.218413791432183	white lower	-0.056884560680593	white lower	FALSE
+v2_KC_cortex_cuticle	F62	1138	384	-0.119982770123577	white lower	0.00708399564292328	white higher	TRUE

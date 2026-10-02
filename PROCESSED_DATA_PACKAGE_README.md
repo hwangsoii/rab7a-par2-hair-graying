@@ -32,8 +32,9 @@ contributed one black-hair and one gray-hair sample from the same scalp.
 | `DATA_DICTIONARY.md` | Field definitions |
 | `MANIFEST.tsv` | File sizes and SHA-256 checksums |
 
-The package does not contain the Wu et al. external cohort. The exact values
-used for Figure S2B are included with the public analysis code.
+The package does not contain the Wu et al. external cohort. Revised external-cohort source values belong with the corrected analysis
+code, not in this internal-cohort deposit. The original matrix and metadata
+payloads are unchanged in the 2 October 2026 code update.
 
 ## Matrix generation
 
@@ -68,3 +69,14 @@ steps were:
 The cell metadata provide the final cell-type assignment and UMAP coordinates.
 The `sample` and `matrix_barcode` fields map each retained cell to its deposited
 library matrix.
+
+
+## Availability status checked on 2 October 2026
+
+Mendeley Data version 1 is deposited under embargo until 6 August 2027
+(00:00 UTC). Earlier public release is planned upon publication. The corrected
+code destination is https://github.com/hwangsoii/rab7a-par2-hair-graying.
+The corrected code and external source data are supplied in this repository.
+This code revision does not modify the Mendeley files or embargo. Direct
+comparison with the authenticated Mendeley upload remains pending. No new
+FASTQ or participant data are added.

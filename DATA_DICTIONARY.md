@@ -36,39 +36,13 @@
 | `<sample>_features.tsv.gz` | Ensembl identifier, gene symbol and feature type |
 | `<sample>_barcodes.tsv.gz` | Barcodes in matrix-column order |
 
-## External-cohort Figure S2B source data
 
-These tables contain values derived from the public Wu et al. cohort, not from
-participants enrolled in this study.
+## Revised external-cohort tables
 
-### `data/external/Figure_S2B_source_data.tsv`
-
-| Field | Description |
-| --- | --- |
-| `public_cell_id` | New sequential identifier used only in this repository |
-| `source_sample` | Sample identifier in the working public dataset |
-| `donor` | Public donor label from the source study |
-| `phenotype` | `black` or `white` hair |
-| `krt_cluster` | Re-clustered keratinocyte subcluster |
-| `KRT35`, `KRT85` | Normalized expression used for subcluster ranking |
-| `KRT35_KRT85_score` | Per-cell mean of normalized KRT35 and KRT85 expression |
-| `RAB7A` | Normalized expression plotted in Figure S2B |
-
-### `data/external/Figure_S2B_cluster_scores.tsv`
-
-| Field | Description |
-| --- | --- |
-| `krt_cluster` | Public-cohort keratinocyte subcluster |
-| `mean_krt35_85` | Subcluster mean of the composite KRT35/KRT85 score |
-| `total_cells` | Number of keratinocyte-lineage cells in the subcluster |
-| `rank` | Descending rank by `mean_krt35_85` |
-| `selected` | Whether the subcluster was in the top quartile |
-
-### `data/external/Figure_S2B_sample_summary.tsv`
-
-| Field | Description |
-| --- | --- |
-| `source_sample`, `donor`, `phenotype` | Public-cohort sample descriptors |
-| `n_cells` | Selected cells in the sample |
-| `mean_RAB7A`, `median_RAB7A` | Sample-level normalized-expression summaries |
-| `pct_expressing_RAB7A` | Percentage of selected cells with RAB7A above zero |
+The fields and validation rules for every revised table are documented in
+`supplementary_code/external_cohort/README.md`. These are derived from public
+third-party data. Opaque IDs replace original cell barcodes. Public sample and
+donor labels are retained to make the four-donor/six-sample structure explicit.
+The old 2,932-cell table and top-quartile cluster ranking are superseded, not
+combined with the revised 3,315-cell analysis. Internal metadata definitions
+above are unchanged.

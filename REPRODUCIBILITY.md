@@ -1,69 +1,99 @@
-# Reproducibility notes
+# Reproducibility and interpretation
 
-## Environment
+## Internal cohort (unchanged analysis)
 
-The reported analyses used R 4.3.3 and Seurat 5.2.1. The saved Seurat objects
-report object version 5.1.0. `sessionInfo.txt` records the package environment.
-Seurat 5 or later is required because the code calls `JoinLayers()`.
+Four libraries represent two paired donors, not four independent people.
+QC uses >500 and <5,000 detected genes, <10% mitochondrial UMIs and <40,000
+UMIs. Per-library LogNormalize and 2,000 variable genes precede CCA integration
+(dimensions 1-20). PCA uses 30 components; UMAP/neighbors use dimensions 1-20.
+Clustering resolutions are 0.5 for all cells and 0.6 for keratinocytes.
+The internal KRT35/KRT85 cluster-mean threshold is >0.5. The existing selected
+object comprises all 618 cells of cluster 6 (382 black, 236 gray).
 
-## Main-cohort data flow
+`01`-`03` and `config.R` are copied unchanged from the prior code release.
+`04` retains the internal calculations unchanged, but no longer builds the
+obsolete external panel. Its melanocyte analysis tests 10 specified genes,
+not 19, with a 10-test Bonferroni family. Other internal correction families
+are 49 RAB genes and nine cell types. Seurat `FindMarkers` uses its own
+Bonferroni-adjusted `p_val_adj`; it is not a Benjamini-Hochberg result.
+The standalone `05` and `06` scripts replot existing internal objects.
 
-```text
-01_analysis_pipeline.R
-  filtered Matrix Exchange files -> integrated and annotated Seurat objects
+## External counts and identity
 
-02_keratinocyte_analysis.R
-  integrated object -> keratinocyte subclusters and differential-expression results
+Input is the six Cell Ranger-filtered integer UMI matrices deposited by
+Audrey Onfroy at https://doi.org/10.5281/zenodo.15103193, derived from
+https://www.biosino.org/node/project/detail/OEP002321. All 43 downloaded files
+matched the Zenodo MD5 records. The 42 payload files also matched the author's
+42-entry checksum list; the 43rd file is that checksum list itself.
+Filtered columns exactly matched the raw-droplet
+matrices, and retained cell counts/median UMIs matched the web summaries.
+The deposit description says Cell Ranger 3.0.1/hg19; all six web summaries say
+3.1.0 with an hg19ens91 reference. That documentation discrepancy remains
+recorded rather than silently resolved.
 
-03_make_Fig1.R
-  processed objects -> Figure 1B-E and Figure S1C-E source panels
+| Sample | Official FASTQ prefix | Phenotype | Donor |
+| --- | --- | --- | --- |
+| F18 | ryg035 | black | F18 |
+| F59 | ryg029 | black | F59 |
+| F31B | black-1 | black | F31 |
+| F31W | white-2 | white | F31 |
+| F62B | ryg047 | black | F62 |
+| F62W | ryg048 | white | F62 |
 
-04_make_SuppFig1.R
-  processed objects + released Figure S2B table -> Figure S1A-B and Figure S2A-B panels
-```
+F18 and F59 contribute unpaired black samples. F31 and F62 contribute paired
+black/white samples. The former local donor assignments were swapped; this
+release uses the official mapping. The old h5ad input remains unauthenticated
+and is not an input to the new analysis.
 
-Main parameters:
+## Processing and population definition
 
-- QC: `nFeature_RNA > 500`, `nFeature_RNA < 5000`, `percent.mt < 10`,
-  `nCount_RNA < 40000`
-- Normalization: Seurat log normalization and 2,000 variable features per
-  library
-- Integration: canonical correlation analysis, dimensions 1-20
-- PCA: 30 components; UMAP, t-SNE and neighbors: dimensions 1-20
-- Clustering resolution: 0.5 for all cells and 0.6 for keratinocytes
-- Internal KRT35/KRT85 selection: subcluster mean composite score greater than
-  0.5
-- Differential expression: Wilcoxon rank-sum test; Seurat `p_val_adj` is
-  Bonferroni adjusted across genes
+The reconstruction uses Seurat 5.2.1 on R 4.3.3. Each sample uses
+`CreateSeuratObject(min.cells=3, min.features=200)`, the internal QC thresholds,
+LogNormalize (scale factor 10,000), 2,000 variable genes and CCA dimensions
+1-20. A fixed lineage-marker module-score rule annotates integrated clusters
+at resolution 0.5. No doublet-removal step was performed. The mitochondrial
+filter removes approximately 53-55% of the F31 libraries, versus 11-31% in
+the other libraries. Differing chemistry and QC retention remain limitations.
 
-The four libraries come from two paired donors. Cell-level tests describe
-differences among profiled cells and do not increase the number of independent
-donors.
+The first frozen >0.5 KRT35/KRT85 rule selected all 20 keratinocyte subclusters:
+15,214 cells. This is the all-keratinocyte context, not an enriched subset.
+Amendment 01 instead selected the integrated clusters assigned the
+`KC_cortex_cuticle` marker lineage (clusters 3, 6, 9, 14), retaining all
+3,315 cells. The lineage marker set is KRT31, KRT35, KRT85, KRT32 and KRT33A.
+Marker review supports the display label "KRT35/KRT85-enriched keratinocytes"
+but the subset includes broader differentiating/matrix-TAC features; it is
+not a pure cortex population or the same selection rule as the internal cohort.
 
-## External cohort and Figure S2B
+## Timing and statistics
 
-Figure S2B uses the public human hair-follicle cohort from Wu et al. 2022
-([article](https://doi.org/10.1038/s41421-022-00394-2),
-[OEP002321](https://www.biosino.org/node/project/detail/OEP002321),
-[source code](https://github.com/zhendejuzi/scRNA_HF)). Six samples were used:
-F18, F31 black, F31 white, F59, F62 black and F62 white. F18 was classified as
-black hair according to the source article and Supplementary Table S1.
+The original count-based plan was frozen before new RAB7A outcome extraction,
+with prior exploratory results disclosed. The amendment followed inspection
+of lineage/marker distributions, before the new target-gene results. Analysts
+were not blind to the earlier h5ad-based exploratory results. The old top-quartile
+rule was selected after outcome inspection and is not reused here.
 
-Keratinocyte-lineage cells were re-clustered into 21 subclusters. Subclusters
-were ranked by their mean normalized KRT35/KRT85 composite expression, and the
-top quartile (six subclusters) was retained. The released source table contains
-2,932 selected cells, including 2,393 from black-hair samples and 539 from
-white-hair samples. Figure S2B reports a two-sided cell-level Wilcoxon rank-sum
-test. The six-row sample summary is provided to make the cohort structure
-explicit.
+The frozen outcome runner produced descriptive per-sample and paired summaries
+once. Nominal pooled-cell Wilcoxon tests were added subsequently, after viewing
+those descriptive results, at the authors' request. They use two-sided,
+unpaired, asymptotic rank-sum tests (`exact=FALSE`, `correct=TRUE`) with ties
+and all zero values retained. No multiple-testing or donor-clustering adjustment
+is applied. These P values characterize sampled-cell distributions, not
+independent biological replication. The selected population is nested within
+the all-keratinocyte population.
 
-Run `supplementary_code/external_cohort/01_make_Figure_S2B.R` to recreate the
-panel and statistics from the exact released values. The full third-party
-expression object and raw reads are not redistributed.
+For the selected population, the paired mean-lognormalized changes have
+opposite signs (F31 lower in white, F62 slightly higher), although both paired
+pseudobulk log2(CPM+1) changes are lower. Do not summarize these findings as
+uniform donor-level validation. Exact sample/paired summaries remain in the
+release and aggregate provenance records.
 
-## Stochastic steps
+## What was verified for this release
 
-Seurat defaults used in the released workflow are `FindClusters(random.seed =
-0)`, `RunUMAP(seed.use = 42)` and `RunTSNE(seed.use = 1)`. Cosmetic point jitter
-is unseeded and does not affect any statistic. Results remain sensitive to
-package versions; compare reruns with `sessionInfo.txt`.
+The small-table export is checked against the frozen objects, approved
+membership and recorded sample summaries. Standalone plotting and its nominal
+statistics are checked independently of access to the full expression objects.
+R syntax, public-package contents and original-source hashes are checked.
+The full internal and external preprocessing pipelines were NOT rerun for
+this packaging update. Historical freeze gates are preserved and must not be
+bypassed to advertise a fresh prospective analysis. See the provenance README
+for files/paths required to study or reconstruct the historical workflow.

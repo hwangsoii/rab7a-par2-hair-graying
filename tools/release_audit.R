@@ -90,11 +90,20 @@ forbidden_ext <- "\\.(fastq|fq|bam|sam|cram|h5ad|h5|h5seurat|loom|mtx|rds|rdata|
 hits_ext <- audit_rel[grepl(forbidden_ext, audit_rel, ignore.case = TRUE)]
 allowed_tabular <- c(
   "data/sample_manifest.tsv",
-  "data/external/Figure_S2B_source_data.tsv",
-  "data/external/Figure_S2B_cluster_scores.tsv",
-  "data/external/Figure_S2B_sample_summary.tsv"
+  "data/external/sample_manifest.tsv",
+  "data/external/rab7a_cells.tsv",
+  "data/external/sample_summaries.tsv",
+  "data/external/paired_descriptive.tsv",
+  "data/external/nominal_cell_tests.tsv",
+  "data/external/cluster_selection.tsv",
+  "data/external/v2_cluster_by_sample.tsv",
+  "data/external/markers_by_cluster.tsv",
+  "data/external/markers_by_lineage.tsv",
+  "provenance/external_stage2/outputs/E_outcome_amendment01/E1_per_sample.tsv",
+  "provenance/external_stage2/outputs/E_outcome_amendment01/E2_paired_donors.tsv"
 )
-hits_ext <- setdiff(hits_ext, allowed_tabular)
+hits_ext <- union(hits_ext, setdiff(
+  audit_rel[grepl("\\.tsv$", audit_rel)], allowed_tabular))
 if (length(hits_ext) == 0) {
   record("No data/binary/figure files", "PASS")
 } else {
@@ -117,7 +126,7 @@ if (length(hits_path) == 0) {
 }
 
 # --- Text scanning -----------------------------------------------------------
-text_files <- audit_abs[grepl("\\.(R|r|md|txt|tsv|gitignore|yml|yaml)$|(^|/)\\.gitignore$",
+text_files <- audit_abs[grepl("\\.(R|r|py|json|md|txt|tsv|gitignore|yml|yaml)$|(^|/)\\.gitignore$",
                               audit_abs)]
 read_text <- function(f) tryCatch(readLines(f, warn = FALSE),
                                   error = function(e) character(0))

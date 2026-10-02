@@ -1,0 +1,127 @@
+{
+  "record": "C10_v2_population_freeze",
+  "script": "07_freeze_v2_population.R",
+  "frozen_at": "2026-10-01 08:33:48 UTC",
+  "definitions": {
+    "v1": "C9: all keratinocytes (rule_non_discriminating_all_keratinocytes); expression from kc object counts/data",
+    "v2": "all cells of stage2_integrated_annotated.rds with existing lineage == 'KC_cortex_cuticle'; expression from integrated object counts/data"
+  },
+  "v2_derived_clusters_integrated_res0.5": [3, 6, 9, 14],
+  "v2_n_cells": 3315,
+  "v2_per_sample": {
+    "F18": 179,
+    "F59": 820,
+    "F31B": 547,
+    "F31W": 247,
+    "F62B": 1138,
+    "F62W": 384
+  },
+  "v2_subset_of_v1": true,
+  "v1_n_cells": 15214,
+  "annotation_decision": "provisionally_consistent",
+  "provisional_name": "hair-shaft differentiating keratinocytes with cortex/cuticle-marker enrichment",
+  "dependencies": [
+    {
+      "name": "plan",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/ANALYSIS_PLAN_2026-10-01.md",
+      "sha256": "9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33"
+    },
+    {
+      "name": "B0",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/B0_plan_freeze.txt",
+      "sha256": "fcd02102db50144fda1d89c74a0d81875c327ca0f3b9e2117acb2a0c5b2489ff"
+    },
+    {
+      "name": "C9",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/C9_population_freeze.json",
+      "sha256": "6783493812399dec5b88f121b8a57efca8dc1d10cea45bc9788866aaab5a62cf"
+    },
+    {
+      "name": "amendment",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/AMENDMENT_01_POPULATION_v2_2026-10-01.md",
+      "sha256": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84"
+    },
+    {
+      "name": "B1",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/B1_amendment01_freeze.txt",
+      "sha256": "a9e3968c1b189a007b5adba36c21729207ccf1be945ba9a99c8051129039078b"
+    },
+    {
+      "name": "v1_cells",
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_population_cells.txt",
+      "sha256": "6fb28986b51d958f270dde3358dd1f0256a6c1355351c55fe08ca97193f19a41"
+    },
+    {
+      "name": "v2_cells",
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_v2_population_cells.txt",
+      "sha256": "809a3d06a983b8b11762b107e095df3df9428d854bd6c38535cc6aa93fbe5485"
+    },
+    {
+      "name": "kc_object",
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_keratinocytes_subclustered.rds",
+      "sha256": "8b1593f2ecb742b4de9f515d543e886124fb90261cf70b3fe59ac1baf974b4fa"
+    },
+    {
+      "name": "integrated_object",
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_integrated_annotated.rds",
+      "sha256": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59"
+    },
+    {
+      "name": "A4",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/A4_checkpointA_enforced.json",
+      "sha256": "92f6320a8da303e110a4898af38e2fcb12b2f1c073fbdf8585309e603ac8505e"
+    },
+    {
+      "name": "V2_M0",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_M0_marker_review.json",
+      "sha256": "ac9a0a11eb3013eaf53740c1c0756ae89ed6fcbdf38cb148a15e2c664a1f704c"
+    },
+    {
+      "name": "V2_D0",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_D0_annotation_decision.json",
+      "sha256": "ba649fcaefd1c0f52ce89bde24c1c025fb82e5c3997d27fe85e688cfc7732cd5"
+    },
+    {
+      "name": "C2_report",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/CHECKPOINT_C2_AMENDMENT01_MARKER_REVIEW.md",
+      "sha256": "6ea2235cfd7d91b520397a8efb8cdcd8e0b418a5e114ac3e1f1dc65b42688652"
+    },
+    {
+      "name": "script05",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/05_enforce_checkpoint_A.R",
+      "sha256": "b6a8bd2cb49244494db1759e0406ca9262b80b7f502c1796bb8887e7cf26da47"
+    },
+    {
+      "name": "script06",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/06_marker_review_v2.R",
+      "sha256": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6"
+    },
+    {
+      "name": "script07",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/07_freeze_v2_population.R",
+      "sha256": "c8407803564e5569a08cf6577e7e34688110724f337edc63a07a9dd9d75613ea"
+    },
+    {
+      "name": "script08",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/08_outcome_amendment01.R",
+      "sha256": "3511fcf2ef2f17577fa15ebf8c199bfc8a90ea9711a8adfee2d1ed3c1353792f"
+    },
+    {
+      "name": "stage2_common",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_common.R",
+      "sha256": "7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c"
+    },
+    {
+      "name": "stage2_validate",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_validate.R",
+      "sha256": "ed902acfe583e394e544f5b2435b4176d74ecdef89a38b6700b29fcbc7ead7dc"
+    },
+    {
+      "name": "stage2_amend_common",
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_amend_common.R",
+      "sha256": "2cd37bdec67c87d174ea297b99a3c9525d78239a3b83afa1eeb1e5b497725267"
+    }
+  ],
+  "checksum_note": "C10 contains no checksum of itself; the independent review record stores C10's SHA-256.",
+  "session": ["R version 4.3.3 (2024-02-29)", "Platform: aarch64-apple-darwin20 (64-bit)", "Running under: macOS 26.6.2", "", "Matrix products: default", "BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib ", "LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Asia/Seoul", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] jsonlite_2.0.0 digest_0.6.37 ", "", "loaded via a namespace (and not attached):", "[1] compiler_4.3.3"]
+}

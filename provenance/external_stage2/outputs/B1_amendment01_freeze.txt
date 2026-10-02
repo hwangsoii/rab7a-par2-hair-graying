@@ -1,0 +1,11 @@
+Amendment 01 frozen (before any V2_* marker-review output exists)
+frozen_at_utc: 2026-10-01T08:27:34Z
+amendment_file: AMENDMENT_01_POPULATION_v2_2026-10-01.md
+amendment_sha256: 0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84
+amends_plan_sha256: 9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33
+helper_sha256_at_freeze:
+  7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c  scripts/stage2_common.R
+  68f8ebd8a41d0614391eb6efd619e0bf114f5c1249faa8388e14ef9b42a284d1  scripts/stage2_validate.R
+  2cd37bdec67c87d174ea297b99a3c9525d78239a3b83afa1eeb1e5b497725267  scripts/stage2_amend_common.R
+outputs/V2_* present at freeze: 0
+No RAB7A/F2RL1 outcome comparison had been examined at this time (analyst attestation).

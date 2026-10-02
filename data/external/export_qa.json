@@ -1,0 +1,295 @@
+{
+  "release": "external_cohort_2026-10-02",
+  "export_script": "export_jid_external_release.R",
+  "export_script_sha256": "25f9cd3fafebca4da4fcf4d5abe3ddb23e902c9c75ce9f747abb126573acd01c",
+  "replot_script": {
+    "path": "supplementary_code/external_cohort/01_make_Figure_S2B.R",
+    "sha256": "c6c76427b0fca69ca806b73277bd77197df9d290bc9ae2856ef5c2366e83992f"
+  },
+  "source_manifest_sha256": "9a63d03d0e6197e65352e29cac72d4ec5411af4985377760732880756a2e41c5",
+  "sources": [
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/C10_v2_population_freeze.json",
+      "sha256_before": "9a63d03d0e6197e65352e29cac72d4ec5411af4985377760732880756a2e41c5",
+      "sha256_after": "9a63d03d0e6197e65352e29cac72d4ec5411af4985377760732880756a2e41c5"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/ANALYSIS_PLAN_2026-10-01.md",
+      "sha256_before": "9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33",
+      "sha256_after": "9be9163a6661798c9626ee4e52fe340b0c34e93f5e7be0c4f30d0a89ce0a4c33"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/B0_plan_freeze.txt",
+      "sha256_before": "fcd02102db50144fda1d89c74a0d81875c327ca0f3b9e2117acb2a0c5b2489ff",
+      "sha256_after": "fcd02102db50144fda1d89c74a0d81875c327ca0f3b9e2117acb2a0c5b2489ff"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/C9_population_freeze.json",
+      "sha256_before": "6783493812399dec5b88f121b8a57efca8dc1d10cea45bc9788866aaab5a62cf",
+      "sha256_after": "6783493812399dec5b88f121b8a57efca8dc1d10cea45bc9788866aaab5a62cf"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/AMENDMENT_01_POPULATION_v2_2026-10-01.md",
+      "sha256_before": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84",
+      "sha256_after": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/B1_amendment01_freeze.txt",
+      "sha256_before": "a9e3968c1b189a007b5adba36c21729207ccf1be945ba9a99c8051129039078b",
+      "sha256_after": "a9e3968c1b189a007b5adba36c21729207ccf1be945ba9a99c8051129039078b"
+    },
+    {
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_population_cells.txt",
+      "sha256_before": "6fb28986b51d958f270dde3358dd1f0256a6c1355351c55fe08ca97193f19a41",
+      "sha256_after": "6fb28986b51d958f270dde3358dd1f0256a6c1355351c55fe08ca97193f19a41"
+    },
+    {
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_v2_population_cells.txt",
+      "sha256_before": "809a3d06a983b8b11762b107e095df3df9428d854bd6c38535cc6aa93fbe5485",
+      "sha256_after": "809a3d06a983b8b11762b107e095df3df9428d854bd6c38535cc6aa93fbe5485"
+    },
+    {
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_keratinocytes_subclustered.rds",
+      "sha256_before": "8b1593f2ecb742b4de9f515d543e886124fb90261cf70b3fe59ac1baf974b4fa",
+      "sha256_after": "8b1593f2ecb742b4de9f515d543e886124fb90261cf70b3fe59ac1baf974b4fa"
+    },
+    {
+      "path": "OneDrive_2025-09-11/Data/cell discovery/onfroy_zenodo_15103193/derived/stage2_integrated_annotated.rds",
+      "sha256_before": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59",
+      "sha256_after": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/A4_checkpointA_enforced.json",
+      "sha256_before": "92f6320a8da303e110a4898af38e2fcb12b2f1c073fbdf8585309e603ac8505e",
+      "sha256_after": "92f6320a8da303e110a4898af38e2fcb12b2f1c073fbdf8585309e603ac8505e"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_M0_marker_review.json",
+      "sha256_before": "ac9a0a11eb3013eaf53740c1c0756ae89ed6fcbdf38cb148a15e2c664a1f704c",
+      "sha256_after": "ac9a0a11eb3013eaf53740c1c0756ae89ed6fcbdf38cb148a15e2c664a1f704c"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_D0_annotation_decision.json",
+      "sha256_before": "ba649fcaefd1c0f52ce89bde24c1c025fb82e5c3997d27fe85e688cfc7732cd5",
+      "sha256_after": "ba649fcaefd1c0f52ce89bde24c1c025fb82e5c3997d27fe85e688cfc7732cd5"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/CHECKPOINT_C2_AMENDMENT01_MARKER_REVIEW.md",
+      "sha256_before": "6ea2235cfd7d91b520397a8efb8cdcd8e0b418a5e114ac3e1f1dc65b42688652",
+      "sha256_after": "6ea2235cfd7d91b520397a8efb8cdcd8e0b418a5e114ac3e1f1dc65b42688652"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/05_enforce_checkpoint_A.R",
+      "sha256_before": "b6a8bd2cb49244494db1759e0406ca9262b80b7f502c1796bb8887e7cf26da47",
+      "sha256_after": "b6a8bd2cb49244494db1759e0406ca9262b80b7f502c1796bb8887e7cf26da47"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/06_marker_review_v2.R",
+      "sha256_before": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6",
+      "sha256_after": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/07_freeze_v2_population.R",
+      "sha256_before": "c8407803564e5569a08cf6577e7e34688110724f337edc63a07a9dd9d75613ea",
+      "sha256_after": "c8407803564e5569a08cf6577e7e34688110724f337edc63a07a9dd9d75613ea"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/08_outcome_amendment01.R",
+      "sha256_before": "3511fcf2ef2f17577fa15ebf8c199bfc8a90ea9711a8adfee2d1ed3c1353792f",
+      "sha256_after": "3511fcf2ef2f17577fa15ebf8c199bfc8a90ea9711a8adfee2d1ed3c1353792f"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_common.R",
+      "sha256_before": "7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c",
+      "sha256_after": "7c7c3f52283d9a46665cf3a52013c9697439a2d3cfa134d5065ea2149d12228c"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_validate.R",
+      "sha256_before": "ed902acfe583e394e544f5b2435b4176d74ecdef89a38b6700b29fcbc7ead7dc",
+      "sha256_after": "ed902acfe583e394e544f5b2435b4176d74ecdef89a38b6700b29fcbc7ead7dc"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/scripts/stage2_amend_common.R",
+      "sha256_before": "2cd37bdec67c87d174ea297b99a3c9525d78239a3b83afa1eeb1e5b497725267",
+      "sha256_after": "2cd37bdec67c87d174ea297b99a3c9525d78239a3b83afa1eeb1e5b497725267"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_M1_markers_by_integrated_cluster.tsv",
+      "sha256_before": "93b00a1e0e30561e17f8bade1f124a5b7b676d1e2a1a834880f85a249be913f6",
+      "sha256_after": "93b00a1e0e30561e17f8bade1f124a5b7b676d1e2a1a834880f85a249be913f6"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/V2_M2_markers_by_lineage_group.tsv",
+      "sha256_before": "275a918146fbbf5902d5158f52a9f50d24ebf7a86edc3bd777d122c2d7ae2bcf",
+      "sha256_after": "275a918146fbbf5902d5158f52a9f50d24ebf7a86edc3bd777d122c2d7ae2bcf"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/E_outcome_amendment01/E0_outcome.json",
+      "sha256_before": "85878ba5607a1ad7a77cd2bf963b747ee2322d7332fc83f462ef463e90883976",
+      "sha256_after": "85878ba5607a1ad7a77cd2bf963b747ee2322d7332fc83f462ef463e90883976"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/E_outcome_amendment01/E1_per_sample.tsv",
+      "sha256_before": "ce1c9d3a530608f2f1656e2d52bbb27c91346dfc3278ade217c06adabd99f22c",
+      "sha256_after": "ce1c9d3a530608f2f1656e2d52bbb27c91346dfc3278ade217c06adabd99f22c"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/E_outcome_amendment01/E2_paired_donors.tsv",
+      "sha256_before": "be193670e775e9227089e0bc20b73a44d6bd2d7eb3b806f0e7bd69a491cf5a55",
+      "sha256_after": "be193670e775e9227089e0bc20b73a44d6bd2d7eb3b806f0e7bd69a491cf5a55"
+    },
+    {
+      "path": "figures/JID_external_cell_level_2026-10-01_nominalP/PLOT_QA.json",
+      "sha256_before": "29c860826651c5decffb3834c0a923b53e661dcf0b7e44575f8a8bd5c2957561",
+      "sha256_after": "29c860826651c5decffb3834c0a923b53e661dcf0b7e44575f8a8bd5c2957561"
+    },
+    {
+      "path": "plot_jid_external_cell_violin.R",
+      "sha256_before": "d08bff062f2c8be956035e765ed812e51c041aeb86d3237b8abd4d2a058e48fa",
+      "sha256_after": "d08bff062f2c8be956035e765ed812e51c041aeb86d3237b8abd4d2a058e48fa"
+    },
+    {
+      "path": "figures/JID_external_cell_level_2026-10-01_nominalP/External_RAB7A_differentiating_KC_cell_level.pdf",
+      "sha256_before": "0a736691ae49fba5185f6569305f8c0377b4ba38d65c28bc3e4ba2a6abafbf05",
+      "sha256_after": "0a736691ae49fba5185f6569305f8c0377b4ba38d65c28bc3e4ba2a6abafbf05"
+    },
+    {
+      "path": "figures/JID_external_cell_level_2026-10-01_nominalP/External_RAB7A_differentiating_KC_cell_level.png",
+      "sha256_before": "74fcca940b58367077c5a4c58c55afe924449021a024f3fa3a9cc2d911fae6f8",
+      "sha256_after": "74fcca940b58367077c5a4c58c55afe924449021a024f3fa3a9cc2d911fae6f8"
+    },
+    {
+      "path": "figures/JID_external_cell_level_2026-10-01_nominalP/External_RAB7A_all_KC_cell_level.pdf",
+      "sha256_before": "9e34ab1375acfd0174a12fe9aa9b6ff7c5e52d414d09ecccca352fe05c31d796",
+      "sha256_after": "9e34ab1375acfd0174a12fe9aa9b6ff7c5e52d414d09ecccca352fe05c31d796"
+    },
+    {
+      "path": "figures/JID_external_cell_level_2026-10-01_nominalP/External_RAB7A_all_KC_cell_level.png",
+      "sha256_before": "36e1791391f79acea41a7d11c9b41b1ab1b825484d71464e13caf81c2aa39076",
+      "sha256_after": "36e1791391f79acea41a7d11c9b41b1ab1b825484d71464e13caf81c2aa39076"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/C2_cluster_annotation_scores.tsv",
+      "sha256_before": "c841ed75c91c72b8ff6199b99f919272c50383d6ca114a78649073741452de94",
+      "sha256_after": "c841ed75c91c72b8ff6199b99f919272c50383d6ca114a78649073741452de94"
+    },
+    {
+      "path": "RAB7A-PAR2/논문/Rab7A_DATA/JID/Letter_working_2026-09-29/verification/external_cohort_provenance/stage2_reconstructed_counts_2026-10-01/outputs/C3_cluster_by_sample_counts.tsv",
+      "sha256_before": "7e7dc6738855f429c7d6168042ff0d6617dde1d0ff4532f4f816e256fb229d2c",
+      "sha256_after": "7e7dc6738855f429c7d6168042ff0d6617dde1d0ff4532f4f816e256fb229d2c"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/external/sample_manifest.tsv",
+      "rows": 6,
+      "sha256": "f9c0e635877442a7a5d216ac7b1a95c5035694ee85095fcb5449f776e55c2c45",
+      "_row": "sample_manifest"
+    },
+    {
+      "path": "data/external/rab7a_cells.tsv",
+      "rows": 18529,
+      "sha256": "aa3ad46b6720e186b588426f1624934805a22e2657b1ed2d3e98949d72cedf83",
+      "_row": "rab7a_cells"
+    },
+    {
+      "path": "data/external/sample_summaries.tsv",
+      "rows": 12,
+      "sha256": "d66564bc47af7820e7d3119d610fe55ca7c3d600437fac3cee2a61680d46ab90",
+      "_row": "sample_summaries"
+    },
+    {
+      "path": "data/external/paired_descriptive.tsv",
+      "rows": 4,
+      "sha256": "74af73d8388131ce2478bbee5af37b169f6ce65c27841d3f60c49e0d240ce4d5",
+      "_row": "paired_descriptive"
+    },
+    {
+      "path": "data/external/nominal_cell_tests.tsv",
+      "rows": 2,
+      "sha256": "f4ed587647f255f8c608a206b3df44a3cfbf77368e9773f88a4b371bb9f137ff",
+      "_row": "nominal_cell_tests"
+    },
+    {
+      "path": "data/external/cluster_selection.tsv",
+      "rows": 21,
+      "sha256": "5c76b9ec177b7a83da4fd73da523c1e92969d59d937619ce6215495cf44243da",
+      "_row": "cluster_selection"
+    },
+    {
+      "path": "data/external/v2_cluster_by_sample.tsv",
+      "rows": 24,
+      "sha256": "5c0af4644508638768c798d470170b97cd6a9ba5278e354ab997d187a47d25d1",
+      "_row": "v2_cluster_by_sample"
+    },
+    {
+      "path": "data/external/markers_by_cluster.tsv",
+      "rows": 432,
+      "sha256": "754c6487171cf29dae596cae6c1c3747c2b014af7b80df31a1a0443b92bec17c",
+      "_row": "markers_by_cluster"
+    },
+    {
+      "path": "data/external/markers_by_lineage.tsv",
+      "rows": 96,
+      "sha256": "0e56e92ed98245eed78d81263df1be7d9ab7de4840b5f0c60758d3c64412ff21",
+      "_row": "markers_by_lineage"
+    }
+  ],
+  "populations": [
+    {
+      "population": "v2_KC_cortex_cuticle",
+      "role": "current_S2B",
+      "n_black": 2684,
+      "n_white": 631,
+      "zeros_black": 602,
+      "zeros_white": 158,
+      "statistic_w": 952884,
+      "p_nominal": 8.07949863333241e-07,
+      "alternative": "two.sided",
+      "paired": false,
+      "exact": false,
+      "correct": true,
+      "donor_adjusted": false,
+      "multiple_testing_adjusted": false
+    },
+    {
+      "population": "v1_all_keratinocytes",
+      "role": "secondary_descriptive",
+      "n_black": 10382,
+      "n_white": 4832,
+      "zeros_black": 3634,
+      "zeros_white": 1791,
+      "statistic_w": 26497275.5,
+      "p_nominal": 9.48614199544862e-09,
+      "alternative": "two.sided",
+      "paired": false,
+      "exact": false,
+      "correct": true,
+      "donor_adjusted": false,
+      "multiple_testing_adjusted": false
+    }
+  ],
+  "validation": {
+    "source_hashes_unchanged": true,
+    "frozen_membership_unchanged": true,
+    "all_cells_and_zeros_retained": true,
+    "exact_expression_roundtrip": true,
+    "v2_subset_of_v1_checked_privately": true,
+    "e1_max_absolute_differences": {
+      "v2_KC_cortex_cuticle": 4.44089209850063e-15,
+      "v1_all_keratinocytes": 3.5527136788005e-15
+    },
+    "e2_paired_summaries_match": true,
+    "current_plot_qa_statistics_match": true,
+    "original_barcodes_exported": false,
+    "full_matrices_exported": false,
+    "outcome_script08_rerun": false,
+    "clustering_rerun": false
+  },
+  "limitations": ["Technical export checks, not independent biological validation or donor-level replication.", "Nominal pooled-cell P values were added after descriptive outcomes; no donor adjustment.", "Nested populations are not independent; old exploratory selection predates count reconstruction.", "Marker summaries preserve the frozen four-decimal precision; no marker-based reselection."],
+  "software": {
+    "R": "4.3.3",
+    "SeuratObject": "5.1.0",
+    "Matrix": "1.6.5"
+  }
+}

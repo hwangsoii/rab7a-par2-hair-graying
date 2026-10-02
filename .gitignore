@@ -74,3 +74,16 @@ supplementary_code/config.local.R
 !data/external/Figure_S2B_source_data.tsv
 !data/external/Figure_S2B_cluster_scores.tsv
 !data/external/Figure_S2B_sample_summary.tsv
+
+# Corrected external source tables and aggregate provenance only.
+!data/external/sample_manifest.tsv
+!data/external/rab7a_cells.tsv
+!data/external/sample_summaries.tsv
+!data/external/paired_descriptive.tsv
+!data/external/nominal_cell_tests.tsv
+!data/external/cluster_selection.tsv
+!data/external/v2_cluster_by_sample.tsv
+!data/external/markers_by_cluster.tsv
+!data/external/markers_by_lineage.tsv
+!provenance/external_stage2/outputs/E_outcome_amendment01/E1_per_sample.tsv
+!provenance/external_stage2/outputs/E_outcome_amendment01/E2_paired_donors.tsv

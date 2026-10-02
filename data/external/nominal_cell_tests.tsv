@@ -1,0 +1,3 @@
+population	role	n_black	n_white	zeros_black	zeros_white	statistic_w	p_nominal	alternative	paired	exact	correct	donor_adjusted	multiple_testing_adjusted
+v2_KC_cortex_cuticle	current_S2B	2684	631	602	158	952884	8.0794986333324072e-07	two.sided	FALSE	FALSE	TRUE	FALSE	FALSE
+v1_all_keratinocytes	secondary_descriptive	10382	4832	3634	1791	26497275.5	9.4861419954486193e-09	two.sided	FALSE	FALSE	TRUE	FALSE	FALSE

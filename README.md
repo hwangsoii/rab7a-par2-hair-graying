@@ -1,82 +1,81 @@
 # RAB7A-PAR2 trafficking in hair graying
 
-Analysis code and source data accompanying the manuscript **"RAB7A regulates
-PAR2 surface trafficking and melanosome uptake in keratinocytes."**
+Corrected analysis-code release, 2 October 2026. This revision replaces the
+previous external-cohort Figure S2B analysis. It does not replace or reprocess
+the internal human cohort. The previous release remains in the Git history;
+the changes are documented in `CHANGELOG.md`.
 
-The repository reproduces the single-cell RNA-sequencing analyses in Figure 1
-and Supplementary Figures S1-S2. It contains no raw sequencing reads, full
-single-cell objects, direct participant identifiers or clinical demographics.
+## Data and code locations
 
-## Data availability
+- **This study:** four processed count matrices and coded cell metadata from
+  two paired donors are deposited in [Mendeley Data](https://doi.org/10.17632/nk9cmvsf6k.1).
+  Version 1 is under embargo until 6 August 2027 (00:00 UTC); earlier release
+  is planned upon article publication. It is not currently an openly
+  downloadable dataset. No raw FASTQs are included.
+- **Analysis code and external source data:** this repository,
+  [rab7a-par2-hair-graying](https://github.com/hwangsoii/rab7a-par2-hair-graying).
+  `CODE_MANIFEST.json` records the files and SHA-256 hashes for this revision.
+- **External input:** Wu et al., *Cell Discovery* (2022),
+  [article](https://doi.org/10.1038/s41421-022-00394-2),
+  [NODE OEP002321](https://www.biosino.org/node/project/detail/OEP002321).
+  The reconstructed analysis uses Audrey Onfroy's documented integer count
+  matrices, [Zenodo 15103193](https://doi.org/10.5281/zenodo.15103193).
+  This is a third-party deposit, not our study's data repository.
 
-- **This study:** processed filtered count matrices and coded cell metadata for
-  four libraries from two paired donors are available at
-  [Mendeley Data](https://doi.org/10.17632/nk9cmvsf6k.1). Raw FASTQ files are
-  not included.
-- **External cohort:** Wu et al., *Cell Discovery* 2022
-  ([doi:10.1038/s41421-022-00394-2](https://doi.org/10.1038/s41421-022-00394-2));
-  NODE/BioSino accession
-  [OEP002321](https://www.biosino.org/node/project/detail/OEP002321); source
-  authors' code at [scRNA_HF](https://github.com/zhendejuzi/scRNA_HF).
-  `data/external/` provides the exact normalized values and subcluster summary
-  used for the downstream Figure S2B analysis. Third-party FASTQ files and the
-  full expression object are not redistributed.
+## Reproduce the corrected external panels
 
-## Study design
-
-Four single-cell libraries were generated from two donors. Each donor
-contributed one black-hair and one gray-hair sample from the same scalp. The
-four libraries are paired samples from two biological donors, not four
-independent individuals.
-
-| sample_id | donor_id | phenotype | paired_design |
-| --- | --- | --- | --- |
-| Black1 | Donor1 | Black | yes |
-| Grey1 | Donor1 | Grey | yes |
-| Black2 | Donor2 | Black | yes |
-| Grey2 | Donor2 | Grey | yes |
-
-## Repository layout
-
-```text
-supplementary_code/                    R analysis scripts and instructions
-supplementary_code/external_cohort/    Figure S2B downstream analysis
-data/sample_manifest.tsv               coded four-library manifest
-data/external/                          exact Figure S2B source-data tables
-DATA_DICTIONARY.md                      field definitions
-PROCESSED_DATA_PACKAGE_README.md        deposited-data contents and processing
-REPRODUCIBILITY.md                      versions, parameters and data flow
-sessionInfo.txt                         analysis environment
-```
-
-## Quick start
-
-The main cohort can be rerun from the four deposited Matrix Exchange triplets:
-
-```sh
-export HAIR_BASE_DIR=/path/to/project_root
-export HAIR_RAW_DIR=/path/to/cellranger_samples
-export HAIR_DATA_DIR=/path/to/working_data
-
-cd supplementary_code
-Rscript 01_analysis_pipeline.R
-Rscript 02_keratinocyte_analysis.R
-Rscript 03_make_Fig1.R
-Rscript 04_make_SuppFig1.R
-```
-
-Figure S2B can be reproduced independently from the small source-data tables:
+From the repository root:
 
 ```sh
 Rscript supplementary_code/external_cohort/01_make_Figure_S2B.R
 ```
 
-The code requires Seurat 5 or later. The reported analyses used R 4.3.3 and
-Seurat 5.2.1. See `supplementary_code/README.md` and `REPRODUCIBILITY.md` for
-the full panel map and analysis parameters.
+See `supplementary_code/external_cohort/README.md` for dependencies, optional
+output paths, exact source-table fields and checks. The released small tables
+reproduce the cell-level plots and nominal Wilcoxon statistics without any
+private Seurat object, patient metadata or original cell barcode.
 
-## License
+The selected population contains **3,315 cells: 2,684 black and 631 white**.
+The all-keratinocyte context contains **15,214 cells: 10,382 black and 4,832 white**.
+Both retain six samples from four donors, including two paired donors. These
+overlapping populations are not independent replications. Nominal cell-level
+P values do not account for donor clustering and do not establish donor-level
+validation. Sample summaries are supplied even though the plots show cells.
 
-Code is released under the MIT License. The external-cohort source-data tables
-are provided solely to reproduce the reported downstream analysis and remain
-subject to the terms of the original public dataset.
+## Internal cohort
+
+Four libraries came from two biological donors, each contributing black and
+gray scalp follicles. Coded library and donor assignments are in
+`data/sample_manifest.tsv`. Internal matrices and coded metadata are unchanged
+by this update. For the existing full pipeline:
+
+```sh
+export HAIR_BASE_DIR=/path/to/code_repository
+export HAIR_RAW_DIR=/path/to/cellranger_samples
+export HAIR_DATA_DIR=/path/to/working_data
+cd supplementary_code
+Rscript 01_analysis_pipeline.R
+Rscript 02_keratinocyte_analysis.R
+Rscript 03_make_Fig1.R
+Rscript 04_make_SuppFig1.R
+Rscript 05_replot_Fig1B_RAB7A_violin.R --nominal-cell-p
+Rscript 06_replot_Fig1A_cluster6_umap.R
+```
+
+The last two scripts require the existing processed objects or regenerated
+equivalents and assert the expected cell counts and cluster identity. They do
+not perform a new analysis. Montages use historical internal panel letters;
+see `supplementary_code/README.md` before assembling manuscript figures.
+
+## Provenance and scope
+
+`provenance/external_stage2/` preserves dated analysis plans, preprocessing
+scripts and selected aggregate records. It is an auditable historical archive,
+not a claim that the entire count-to-figure pipeline has been rerun in a clean
+environment. The standalone table-to-plot workflow is separately verified.
+`REPRODUCIBILITY.md` describes selection timing, sample mapping and limitations.
+
+No raw reads, complete expression matrices, full single-cell objects, direct
+participant identifiers or clinical demographics are included in this code
+package. Code is MIT licensed; external derived data retain their source
+attribution and applicable source-license terms.

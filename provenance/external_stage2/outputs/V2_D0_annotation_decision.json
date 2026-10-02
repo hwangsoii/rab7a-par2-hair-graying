@@ -1,0 +1,35 @@
+{
+  "record": "V2_D0_annotation_decision",
+  "decided_at": "2026-10-01T08:31:56Z",
+  "conclusion": "provisionally_consistent",
+  "allowed_values": [
+    "provisionally_consistent",
+    "unresolved",
+    "inconsistent"
+  ],
+  "decided_by": "analyst (Claude Code); NOT independent approval",
+  "scope": "Annotation-consistency review of the fixed candidate lineage == KC_cortex_cuticle (amendment section 3); marker-only; no RAB7A/F2RL1 extracted",
+  "caveats": [
+    "cluster 9 (749 cells) proliferating matrix/TAC-like with intermediate hair keratins; retained",
+    "hair-keratin and KRT14 detection near-saturated across keratinocytes; evidence rests on mean expression",
+    "KRT33A gives no support; KRT25 in cluster 14 is mixed evidence",
+    "F31 (3' v3) libraries show higher background",
+    "candidate share lower in White than Black sample of both pairs (composition)"
+  ],
+  "bound_sha256": {
+    "integrated_object": "63ca4077e2e1a136ef8d7b2779ab9acfa9fea5b5b4aa81dc4f6c0535b71ffb59",
+    "report_CHECKPOINT_C2": "6ea2235cfd7d91b520397a8efb8cdcd8e0b418a5e114ac3e1f1dc65b42688652",
+    "script06": "c7ff28cb0cc6e51db8a5c7b92ad4dbe9571dbb708625a4edb8fc175676a340c6",
+    "amendment": "0d8f368a8fcf57334c05db64273184033998adcf91ce06dcb43aeec389e3af84",
+    "marker_evidence": {
+      "V2_M0_marker_review.json": "ac9a0a11eb3013eaf53740c1c0756ae89ed6fcbdf38cb148a15e2c664a1f704c",
+      "V2_M1_markers_by_integrated_cluster.tsv": "93b00a1e0e30561e17f8bade1f124a5b7b676d1e2a1a834880f85a249be913f6",
+      "V2_M2_markers_by_lineage_group.tsv": "275a918146fbbf5902d5158f52a9f50d24ebf7a86edc3bd777d122c2d7ae2bcf",
+      "V2_M3_markers_candidate_vs_other_by_sample.tsv": "d0c514cc2a060f20de3baee0151875d7a0c1112d31f6b46651b12061c278c0bc",
+      "V2_M4_markers_candidate_cluster_by_sample.tsv": "41a840ec40e8bb81e3b4e65c2fdd0d7ac842d2548fd65936efc5fb387fe1d62b",
+      "V2_M5_codetection_profiles.tsv": "4f0df8dd54a06dd9be5c3af83376944b3572f1065a529f6d2ebd29d61a466424",
+      "V2_M6_marker_dotplots.pdf": "abedb29ce58add016a0a174cf259da723b0495e92a63074009dc967ad0029ef7",
+      "V2_M7_S1_membership_vs_audit.tsv": "812fcefb0973d59cb0aafdeee20fc1e1a90fc57d36b6fc6fb4251e44c0a5b381"
+    }
+  }
+}
